@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img from "../pic.jpg";
 import Button from "../atoms/Button";
 import Popover from "../molecules/Popover";
@@ -38,7 +39,7 @@ export default function Intro() {
               <div className="flex-none">
                 <Button onClick={() => setShowModal(!showModal)}>
                   {/* <LinkIcon className="text-white h-10"></LinkIcon> */}
-                  <h1 className="text-white decoration-purple-500 font-bold">
+                  <h1 className="text-white underline decoration-purple-500 font-bold">
                     LINKS
                   </h1>
                 </Button>
@@ -83,13 +84,16 @@ export default function Intro() {
               </div>
             </div>
           </div>
-          {/* <div>
-            <button className="block -inset-1 -skew-y-3 bg-purple-500 hover:skew-y-0">
+          <div>
+            <Link
+              className="block -inset-1 -skew-y-3 bg-purple-500 hover:skew-y-0"
+              to="know-more"
+            >
               <span className="m-1 text-white font-bold">
                 Know More About Me!
               </span>
-            </button>
-          </div> */}
+            </Link>
+          </div>
         </div>
       </div>
     </>
