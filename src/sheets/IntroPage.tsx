@@ -31,7 +31,7 @@ export default function Intro() {
               Life Goal: Provide generational wealth to my next Generation.
               <br />
               <br />
-              P.S.- I make my own challenges if I don't have enough. XD
+              P.S.- I make my own challenges if I don't have enough.
             </h2>
             <br />
             <div className="flex gap-4 justify-start">
