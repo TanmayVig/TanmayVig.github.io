@@ -6,6 +6,7 @@ import { AtSymbolIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import GitHubIcon from "../atoms/Icons/GithubIcon";
 import LinkedInIcon from "../atoms/Icons/LinkedInIcon";
+import { heading } from "../assets/vars";
 
 export default function Intro() {
   const [showModal, setShowModal] = useState(false);
@@ -16,12 +17,11 @@ export default function Intro() {
           <div className="relative">
             <img className=" h-screen md:h-screen" src={img} alt="" />
             <div className="absolute text-5xl top-5 left-5">
-              <h1 className="m-2 font-bold text-white underline decoration-purple-500">
-                Tanmay Vig.
-              </h1>
+              <h1 className={`m-2 ${heading}`}>Tanmay Vig.</h1>
             </div>
           </div>
         </div>
+        {/* <Container> */}
         <div className="grid col-span-2 h-full grid-rows-4 grid-flow-col justify-items-center items-center place-content-center">
           <div className="row-span-3 ">
             <h2 className="text-white tracking-wider font-bold">
@@ -39,9 +39,7 @@ export default function Intro() {
               <div className="flex-none">
                 <Button onClick={() => setShowModal(!showModal)}>
                   {/* <LinkIcon className="text-white h-10"></LinkIcon> */}
-                  <h1 className="text-white underline decoration-purple-500 font-bold">
-                    LINKS
-                  </h1>
+                  <h1 className={`${heading}`}>LINKS</h1>
                 </Button>
               </div>
               <div className={`flex-none ${showModal ? "block" : "hidden"}`}>
@@ -74,7 +72,11 @@ export default function Intro() {
               </div>
               <div className={`flex-none ${showModal ? "block" : "hidden"}`}>
                 <Popover>
-                  <a>
+                  <a
+                    className="text-white px-0 hover:cursor-pointer"
+                    href="https://www.linkedin.com/in/tanmay-vig-07176118b/"
+                    target="_blank"
+                  >
                     <LinkedInIcon className="text-white h-5 hover:cursor-pointer"></LinkedInIcon>
                   </a>
                   <p className="text-white bg-purple-500 rounded shadow text-sm font-bold">
@@ -95,6 +97,7 @@ export default function Intro() {
             </Link>
           </div>
         </div>
+        {/* </Container> */}
       </div>
     </>
   );
