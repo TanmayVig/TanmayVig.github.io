@@ -18,3 +18,7 @@ export interface PopoverProp {
 export interface IconProperties {
   className?: string;
 }
+
+export interface ContainerProp {
+  children: ReactNode;
+}
